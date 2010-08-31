@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NS2Torrent", "NS2Torrent\NS2Torrent.vcxproj", "{3844331C-646E-46E2-B524-A73860109113}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "luabind", "luabind.vcxproj", "{D59C26E7-CF21-45A3-8710-3B4AD83FD05D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3844331C-646E-46E2-B524-A73860109113}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3844331C-646E-46E2-B524-A73860109113}.Debug|Win32.Build.0 = Debug|Win32
+		{3844331C-646E-46E2-B524-A73860109113}.Release|Win32.ActiveCfg = Release|Win32
+		{3844331C-646E-46E2-B524-A73860109113}.Release|Win32.Build.0 = Release|Win32
+		{D59C26E7-CF21-45A3-8710-3B4AD83FD05D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D59C26E7-CF21-45A3-8710-3B4AD83FD05D}.Debug|Win32.Build.0 = Debug|Win32
+		{D59C26E7-CF21-45A3-8710-3B4AD83FD05D}.Release|Win32.ActiveCfg = Release|Win32
+		{D59C26E7-CF21-45A3-8710-3B4AD83FD05D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
