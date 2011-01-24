@@ -19,36 +19,19 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 	return TRUE;
 }
 
-void doNothing()
-{
-
-}
-
-extern "C" __declspec(dllexport) int luaopen_NS2TORRENT(lua_State* L){
-		
-	//LuaModule::Initialize(L);
+extern "C" __declspec(dllexport) int luaopen_NS2Torrent(lua_State* L){
 
 	using namespace luabind;
 
 	open(L);
 	
-	module(L,"NS2TORRENT")[
-		/*def("GetRootDirectory", &LuaModule::GetRootDirectory),
-		def("Exists", &LuaModule::FileExists),
-		def("FileSize", &LuaModule::GetFileSize),
-		def("FindFiles", &LuaModule::FindFiles),
-		def("FindDirectorys", &LuaModule::FindDirectorys),
-		def("DateModified",  &LuaModule::GetDateModified),
-		def("GetGameString",  &LuaModule::GetGameString),
-		def("GetDirRootList",  &LuaModule::GetDirRootList),
-		*/
-		//NSRootDir::RegisterClass()
-
-		def("DoNothing", &doNothing)
+	module(L,"NS2Torrent")[
+		//def("myFunc", &luaopen)
+		NS2Torrent::RegisterClass()
 	];
 	
 	//push our module onto the stack tobe our return value
-	lua_getglobal(L, "NS2TORRENT");
+	lua_getglobal(L, "NS2Torrent");
 
 	return 1;
 }

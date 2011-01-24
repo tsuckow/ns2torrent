@@ -1,9 +1,9 @@
-libtorrent-rasterbar-0.15.1/boost
-libtorrent-rasterbar-0.15.1/bin
+libtorrent-rasterbar-*
 *.sdf
 *.suo
 *.user
 *.opensdf
 Debug*
+Release*
 !NS2Torrent/libtorrent.lib
 !NS2Torrent/libtorrent_debug.lib

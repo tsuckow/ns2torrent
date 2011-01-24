@@ -43,7 +43,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\luabind;..\libtorrent-rasterbar-0.15.1\include;..\libtorrent-rasterbar-0.15.1\boost\;..\libtorrent-rasterbar-0.15.1\zlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\luabind;..\libtorrent-rasterbar-0.15.5\include;..\libtorrent-rasterbar-0.15.5\boost\;..\libtorrent-rasterbar-0.15.5\zlib</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TESTLUAMODULE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -51,8 +51,11 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libtorrent_debug.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\libtorrent-rasterbar-0.15.1\boost\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libtorrent-rasterbar-0.15.5\boost\stage\lib</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "E:\PFx86\Steam\steamapps\common\natural selection 2\ModLoader\Mods\Torrent"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -60,15 +63,21 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\include;..\luabind;..\libtorrent-rasterbar-0.15.1\include;..\libtorrent-rasterbar-0.15.1\boost\;..\libtorrent-rasterbar-0.15.1\zlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\luabind;..\libtorrent-rasterbar-0.15.5\include;..\libtorrent-rasterbar-0.15.5\boost\;..\libtorrent-rasterbar-0.15.5\zlib</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;TESTLUAMODULE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>libtorrent.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\libtorrent-rasterbar-0.15.5\boost\stage\lib</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "E:\PFx86\Steam\steamapps\common\natural selection 2\ModLoader\Mods\Torrent"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

@@ -2,7 +2,7 @@
 
 #define CreateString(str) #str
 
-#define MakeUniqueString(str) CreateString(str##2)
+#define MakeUniqueString(str) CreateString(str##"2cbdb1bc-bebd-489e-876a-6f16d25631f8")
 
 #define __luabind_class MakeUniqueString(__luabind_class)
 
